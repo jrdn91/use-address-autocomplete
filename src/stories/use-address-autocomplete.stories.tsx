@@ -1,8 +1,8 @@
 import React from "react"
 import { Meta, StoryFn } from "@storybook/react"
-import useAddressAutocomplete from "../use-address-autocomplete"
 import { createGooglePlacesAdapter } from "../adapters"
 import { createMapBoxAdapter } from "../adapters/map-box"
+import { useAddressAutocomplete } from "../use-address-autocomplete"
 
 type DemoProps = {
   adapter: "google" | "mapbox"
@@ -11,17 +11,7 @@ type DemoProps = {
 }
 
 const Demo = ({ adapter, googleApiKey, mapBoxApiKey }: DemoProps) => {
-  const googlePlacesAdapter = createGooglePlacesAdapter(
-    googleApiKey as string,
-    {
-      suggestRequestOptions: {
-        origin: {
-          latitude: 37.7749,
-          longitude: -122.4194,
-        },
-      },
-    }
-  )
+  const googlePlacesAdapter = createGooglePlacesAdapter(googleApiKey as string)
   const mapBoxAdapter = createMapBoxAdapter(mapBoxApiKey as string)
 
   const {

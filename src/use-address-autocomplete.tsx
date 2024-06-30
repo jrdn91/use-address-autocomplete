@@ -6,7 +6,7 @@ export interface UseAddressAutocompleteProps {
   debounceTime?: number
 }
 
-export default function useAddressAutocomplete<
+export function useAddressAutocomplete<
   OtherSuggestProps extends Record<string, any>,
   OtherSelectedAddressProps extends Record<string, any>,
 >(
