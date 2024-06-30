@@ -1,7 +1,7 @@
 {
   "name": "use-address-autocomplete",
   "description": "A generic hook to power address autocomplete UIs with any service for an UI / CSS framework.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "jrdn91",
   "license": "MIT",
   "keywords": [

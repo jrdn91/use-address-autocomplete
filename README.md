@@ -409,3 +409,7 @@ If you've made an adapter that you think the community would like to use, feel f
 Be sure to follow the practices [above](#creating-custom-adapters) and strongly prefer to follow the factory pattern for the reasons detailed [above](#creating-a-factory)
 
 > None yet, why don't you make one and submit a PR to add it! :star_struck:
+
+### Credits
+
+Created using [React • Typescript • Package Starter](https://github.com/TimMikeladze/tsup-react-package-starter)
