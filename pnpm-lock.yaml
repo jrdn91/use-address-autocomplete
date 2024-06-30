@@ -43,7 +43,7 @@ devDependencies:
     version: 8.1.6(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)
   '@storybook/react-webpack5':
     specifier: 8.1.6
-    version: 8.1.6(@swc/core@1.5.7)(esbuild@0.21.5)(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)
+    version: 8.1.6(@swc/core@1.5.7)(esbuild@0.20.2)(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)
   '@storybook/test':
     specifier: 8.1.6
     version: 8.1.6(vitest@1.6.0)
@@ -173,9 +173,6 @@ devDependencies:
   use-debounce:
     specifier: ^10.0.1
     version: 10.0.1(react@18.3.1)
-  uuid:
-    specifier: ^10.0.0
-    version: 10.0.0
   vitest:
     specifier: 1.6.0
     version: 1.6.0(@types/node@20.14.2)(jsdom@24.1.0)
@@ -3117,7 +3114,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/builder-webpack5@8.1.6(@swc/core@1.5.7)(esbuild@0.21.5)(prettier@3.3.1)(typescript@5.4.5):
+  /@storybook/builder-webpack5@8.1.6(@swc/core@1.5.7)(esbuild@0.20.2)(prettier@3.3.1)(typescript@5.4.5):
     resolution: {integrity: sha512-FP/vEUSM+/x+6Pof4d3EBaLH4dlzpH97Pzc3RsVD1qvEqVRHUyfbROh5Ud7/+X0m75M2kkpFtmlH/W9fVWzWGw==}
     peerDependencies:
       typescript: '*'
@@ -3150,13 +3147,13 @@ packages:
       process: 0.11.10
       semver: 7.6.2
       style-loader: 3.3.4(webpack@5.92.1)
-      terser-webpack-plugin: 5.3.10(@swc/core@1.5.7)(esbuild@0.21.5)(webpack@5.92.1)
+      terser-webpack-plugin: 5.3.10(@swc/core@1.5.7)(esbuild@0.20.2)(webpack@5.92.1)
       ts-dedent: 2.2.0
       typescript: 5.4.5
       url: 0.11.3
       util: 0.12.5
       util-deprecate: 1.0.2
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
       webpack-dev-middleware: 6.1.3(webpack@5.92.1)
       webpack-hot-middleware: 2.26.1
       webpack-virtual-modules: 0.5.0
@@ -3520,7 +3517,7 @@ packages:
     resolution: {integrity: sha512-IZEiTLFHu8Oom/vdEGpisSw5CfU+cw6/fTaX1P3EVClFOWVuy8/3X5MPu4wJH3jPym6E2DBduIUFeRsiuq61gA==}
     dev: true
 
-  /@storybook/preset-react-webpack@8.1.6(@swc/core@1.5.7)(esbuild@0.21.5)(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5):
+  /@storybook/preset-react-webpack@8.1.6(@swc/core@1.5.7)(esbuild@0.20.2)(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5):
     resolution: {integrity: sha512-5x5h30Nm8pTguiWAS/Vb1mYSIsoNs2JydXCekIKOVd752Iq+/cDQio6A7gIE6zbtPgfofoa7fuvweiuT6NG2bw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
@@ -3548,7 +3545,7 @@ packages:
       semver: 7.6.2
       tsconfig-paths: 4.2.0
       typescript: 5.4.5
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     transitivePeerDependencies:
       - '@swc/core'
       - encoding
@@ -3596,7 +3593,7 @@ packages:
       react-docgen-typescript: 2.2.2(typescript@5.4.5)
       tslib: 2.6.3
       typescript: 5.4.5
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3611,7 +3608,7 @@ packages:
       react-dom: 18.3.1(react@18.3.1)
     dev: true
 
-  /@storybook/react-webpack5@8.1.6(@swc/core@1.5.7)(esbuild@0.21.5)(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5):
+  /@storybook/react-webpack5@8.1.6(@swc/core@1.5.7)(esbuild@0.20.2)(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5):
     resolution: {integrity: sha512-jpRpa85efcv+9Kl1vIuwz+QC/Ug522Tx3oAT2FZTc1ZdIBrjeT+jY0tmEDjemRuadFMpjHvrXyW1HDItP5groQ==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
@@ -3622,8 +3619,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@storybook/builder-webpack5': 8.1.6(@swc/core@1.5.7)(esbuild@0.21.5)(prettier@3.3.1)(typescript@5.4.5)
-      '@storybook/preset-react-webpack': 8.1.6(@swc/core@1.5.7)(esbuild@0.21.5)(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)
+      '@storybook/builder-webpack5': 8.1.6(@swc/core@1.5.7)(esbuild@0.20.2)(prettier@3.3.1)(typescript@5.4.5)
+      '@storybook/preset-react-webpack': 8.1.6(@swc/core@1.5.7)(esbuild@0.20.2)(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)
       '@storybook/react': 8.1.6(prettier@3.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)
       '@storybook/types': 8.1.6
       '@types/node': 18.19.39
@@ -5114,7 +5111,7 @@ packages:
       '@babel/core': 7.24.7
       find-cache-dir: 4.0.0
       schema-utils: 4.2.0
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     dev: true
 
   /babel-plugin-polyfill-corejs2@0.4.11(@babel/core@7.24.7):
@@ -5825,7 +5822,7 @@ packages:
       postcss-modules-values: 4.0.0(postcss@8.4.38)
       postcss-value-parser: 4.2.0
       semver: 7.6.2
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     dev: true
 
   /css-select@4.3.0:
@@ -7314,7 +7311,7 @@ packages:
       semver: 7.6.2
       tapable: 2.2.1
       typescript: 5.4.5
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     dev: true
 
   /form-data-encoder@2.1.4:
@@ -7867,7 +7864,7 @@ packages:
       lodash: 4.17.21
       pretty-error: 4.0.0
       tapable: 2.2.1
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     dev: true
 
   /htmlparser2@6.1.0:
@@ -11295,7 +11292,7 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
     dependencies:
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     dev: true
 
   /sucrase@3.35.0:
@@ -11346,7 +11343,7 @@ packages:
     dependencies:
       '@swc/core': 1.5.7
       '@swc/counter': 0.1.3
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     dev: true
 
   /symbol-tree@3.2.4:
@@ -11426,7 +11423,7 @@ packages:
       unique-string: 3.0.0
     dev: true
 
-  /terser-webpack-plugin@5.3.10(@swc/core@1.5.7)(esbuild@0.21.5)(webpack@5.92.1):
+  /terser-webpack-plugin@5.3.10(@swc/core@1.5.7)(esbuild@0.20.2)(webpack@5.92.1):
     resolution: {integrity: sha512-BKFPWlPDndPs+NGGCr1U59t0XScL5317Y0UReNrHaw9/FwhPENlq6bfgs+4yPfyP51vqC1bQ4rp1EfXW5ZSH9w==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -11444,12 +11441,12 @@ packages:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       '@swc/core': 1.5.7
-      esbuild: 0.21.5
+      esbuild: 0.20.2
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
       terser: 5.31.1
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     dev: true
 
   /terser@5.31.1:
@@ -12054,11 +12051,6 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: true
 
-  /uuid@10.0.0:
-    resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
-    hasBin: true
-    dev: true
-
   /uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
@@ -12247,7 +12239,7 @@ packages:
       mime-types: 2.1.35
       range-parser: 1.2.1
       schema-utils: 4.2.0
-      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.21.5)
+      webpack: 5.92.1(@swc/core@1.5.7)(esbuild@0.20.2)
     dev: true
 
   /webpack-hot-middleware@2.26.1:
@@ -12271,7 +12263,7 @@ packages:
     resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
     dev: true
 
-  /webpack@5.92.1(@swc/core@1.5.7)(esbuild@0.21.5):
+  /webpack@5.92.1(@swc/core@1.5.7)(esbuild@0.20.2):
     resolution: {integrity: sha512-JECQ7IwJb+7fgUFBlrJzbyu3GEuNBcdqr1LD7IbSzwkSmIevTm8PF+wej3Oxuz/JFBUZ6O1o43zsPkwm1C4TmA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -12302,7 +12294,7 @@ packages:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(@swc/core@1.5.7)(esbuild@0.21.5)(webpack@5.92.1)
+      terser-webpack-plugin: 5.3.10(@swc/core@1.5.7)(esbuild@0.20.2)(webpack@5.92.1)
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:

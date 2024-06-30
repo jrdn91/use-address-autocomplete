@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid"
 import type { Adapter } from "."
 
 export interface MapBoxSuggestResponse {
@@ -138,17 +137,24 @@ export const createMapBoxAdapter = (
     if (!accessToken) {
       return Promise.reject(console.error("MapBox API key is required"))
     }
-    const newSessionToken = uuidv4()
-    this.sessionToken = newSessionToken
-    window.sessionStorage.setItem("mapboxSessionToken", newSessionToken)
+    const currentSessionToken =
+      window.sessionStorage.getItem("mapBoxSessionToken")
+    if (currentSessionToken) {
+      return Promise.resolve()
+    }
+    const newSessionToken = window.crypto.randomUUID()
+    window.sessionStorage.setItem("mapBoxSessionToken", newSessionToken)
     return Promise.resolve()
   },
   getSuggestions(query) {
+    const sessionToken = window.sessionStorage.getItem(
+      "mapBoxSessionToken"
+    ) as string
     const searchParams = new URLSearchParams({
       ...options?.suggestRequestOptions,
       q: query,
       access_token: accessToken,
-      session_token: this.sessionToken,
+      session_token: sessionToken,
     })
     return fetch(
       `https://api.mapbox.com/search/searchbox/v1/suggest?${searchParams.toString()}`
@@ -162,10 +168,13 @@ export const createMapBoxAdapter = (
       )
   },
   getAddressComponents(suggestion) {
+    const sessionToken = window.sessionStorage.getItem(
+      "mapBoxSessionToken"
+    ) as string
     const searcParams = new URLSearchParams({
       ...options?.retrieveRequestOptions,
       access_token: accessToken,
-      session_token: this.sessionToken,
+      session_token: sessionToken,
     })
     return fetch(
       `https://api.mapbox.com/search/searchbox/v1/retrieve/${suggestion.id}?${searcParams.toString()}`

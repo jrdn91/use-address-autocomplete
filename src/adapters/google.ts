@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid"
 import type { Adapter } from "."
 
 const placeTypes = [
@@ -73,12 +72,17 @@ export const createGooglePlacesAdapter = (
     if (!apiKey) {
       return Promise.reject(console.error("Google API key is required"))
     }
-    const newSessionToken = uuidv4()
-    this.sessionToken = newSessionToken
-    window.sessionStorage.setItem("mapboxSessionToken", newSessionToken)
+    const currentSessionToken =
+      window.sessionStorage.getItem("googleSessionToken")
+    if (currentSessionToken) {
+      return Promise.resolve()
+    }
+    const newSessionToken = window.crypto.randomUUID()
+    window.sessionStorage.setItem("googleSessionToken", newSessionToken)
     return Promise.resolve()
   },
   getSuggestions(query) {
+    const sessionToken = window.sessionStorage.getItem("googleSessionToken")
     return fetch(
       `https://places.googleapis.com/v1/places:autocomplete?key=${apiKey}`,
       {
@@ -86,7 +90,7 @@ export const createGooglePlacesAdapter = (
         body: JSON.stringify({
           ...options?.suggestRequestOptions,
           input: query,
-          sessionToken: this.sessionToken,
+          sessionToken,
         }),
       }
     )
@@ -102,11 +106,14 @@ export const createGooglePlacesAdapter = (
       )
   },
   getAddressComponents(suggestion) {
+    const sessionToken = window.sessionStorage.getItem(
+      "googleSessionToken"
+    ) as string
     const searchParams = new URLSearchParams({
       ...options?.placeDetailsRequestOptions,
       fields: "id,addressComponents,location",
       key: apiKey,
-      sessionToken: this.sessionToken,
+      sessionToken,
     })
     return fetch(
       `https://places.googleapis.com/v1/places/${suggestion.id}?${searchParams.toString()}`

@@ -130,7 +130,6 @@
     "tsx": "4.15.1",
     "typescript": "5.4.5",
     "use-debounce": "^10.0.1",
-    "uuid": "^10.0.0",
     "vitest": "1.6.0"
   },
   "peerDependencies": {
